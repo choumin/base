@@ -2,7 +2,7 @@
 
 # copy the following code into ~/.bashrc file.
 function j {
-	[ "$1" = "" ] && exit
+	[ "$1" = "" ] && cd ~ && return 
 
 	dir=$1
 	min=0
@@ -25,6 +25,9 @@ function j {
 
 	if [ $min -gt 0 ]; then
 		cd $target
+		return
 	fi
+
+	cd $dir 
 }
 
