@@ -72,5 +72,5 @@ function main() {
 
 main 
 
-# add the following command to ~/.bashrc file.
+# append the following command to ~/.bashrc file.
 # /home/zhoumin/shell/sync_snapshot.sh & > /dev/null
