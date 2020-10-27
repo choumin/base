@@ -49,4 +49,4 @@ function j {
 }
 
 # test codes
-j $@
+#j $@
