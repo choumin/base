@@ -2,6 +2,7 @@
 
 scriptPath=$0
 scriptName=${scriptPath##*\/}
+scriptDir=`dirname ${scriptPath}`
 #echo $scriptName
 [ -z "$1" ] && echo "Usage: $scriptName ins" && exit
-python /home/zhoumin/shell/dump_ins.py $1
+python ${scriptDir}/dump_ins.py $1
