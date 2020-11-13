@@ -1,0 +1,14 @@
+rscp(){
+ip=""
+for arg in $*
+do
+    tmp=`echo "$arg" | grep -E -o "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"`
+    if [ ${#tmp} -gt 1 ]
+    then
+        ip=$tmp
+        break
+    fi
+done
+scp -o proxycommand="ssh root@xx.xx.xx.xx nc $ip 22" $*
+}
+
