@@ -1,0 +1,55 @@
+1. 检查nbd模块是否加载
+首先检查当前系统的kernel对NBD模块的支持（NBD:network block device），加载nbd这个module，如下：
+[root@jay-linux kvm_demo]# grep NBD /boot/config-3.5.0
+CONFIG_BLK_DEV_NBD=m
+
+[root@jay-linux kvm_demo]# modinfo nbd
+filename:       /lib/modules/3.5.0/kernel/drivers/block/nbd.ko
+license:        GPL
+description:    Network Block Device
+srcversion:     56F31584CC2EB73E6F1DA69
+depends:
+intree:         Y
+vermagic:       3.5.0 SMP mod_unload modversions
+parm:           nbds_max:number of network block devices to initialize (default: 16) (int)
+parm:           max_part:number of partitions per device (default: 0) (int)
+parm:           debugflags:flags for controlling debug output (int)
+
+[root@jay-linux kvm_demo]# modprobe nbd max_part=16
+
+[root@jay-linux kvm_demo]# lsmod | grep nbd
+nbd                     7593  0
+
+如果当前kernel没有编译好nbd模块，则需要重新编译该模块（或编译整个kernel），在编译kernel时，“make menuconfig”配置kernel时中选择"Device Drivers --> Block devices --> Network block device support".
+
+2. 映射
+将qcow2镜像映射为网络块设备(nbd)，命令如下：
+[root@jay-linux kvm_demo]# qemu-nbd -c /dev/nbd0 rhel6u3.qcow2
+
+[root@jay-linux kvm_demo]# ll /dev/nbd0*      #这里查看一下
+brw-rw---- 1 root disk 43, 0 Nov  1 20:51 /dev/nbd0
+brw-rw---- 1 root disk 43, 1 Nov  1 20:51 /dev/nbd0p1
+brw-rw---- 1 root disk 43, 2 Nov  1 20:51 /dev/nbd0p2
+
+qemu-nbd工具是：QEMU Disk Network Block Device Server，可以用"qemu-nbd --help”命令查看其帮助信息。
+
+3. 挂载 & 使用
+像普通block设备那样使用刚才映射好的网络块设备的分区即可，命令行如下：
+[root@jay-linux kvm_demo]# mount /dev/nbd0p1 /mnt/
+
+[root@jay-linux kvm_demo]# cd /mnt/
+
+[root@jay-linux mnt]# ls
+bin   cgroup  etc   lib    lost+found  misc  net  proc  sbin     srv  tmp  var
+boot  dev     home  lib64  media       mnt   opt  root  selinux  sys  usr
+
+[root@jay-linux mnt]# cd root/
+
+[root@jay-linux root]# touch nbd-test.txt    #这里建立一个文件测试一下，若用这个qcow2 image作为guest启动后也可以看到改文件。
+
+4. 卸载 & 解除映射
+使用完这个qcow2镜像后，卸载已挂载的nbd设备，解除qcow2镜像与nbd设备的关联。
+[root@jay-linux kvm_demo]# umount /mnt/
+
+[root@jay-linux kvm_demo]# qemu-nbd -d /dev/nbd0
+/dev/nbd0 disconnected
