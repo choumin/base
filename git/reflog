@@ -1,0 +1,2 @@
+$ git reflog show  --date=iso work/dev 
+419d8a1 refs/remotes/work/dev@{2020-11-13 11:10:10 +0800}: update by push
