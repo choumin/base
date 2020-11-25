@@ -863,26 +863,46 @@ int GetFrontPageTimeoutFromQemu () {
 }
 
 int array[10];
+
 int LibPcdSet16S(int tokenNumber, int value) {
  array[tokenNumber] = value;
  return 0;
 }
 
+void showArray() {
+ int i = 0;
+ for (i = 0; i < 10; ++i) {
+  printf("%d ", array[i]);
+ }
+ printf("\n");
+}
 void test2() {
 
 
 
 
- int PcdStatus = LibPcdSet16S(0, ((GetFrontPageTimeoutFromQemu ())))
+ int PcdStatus = LibPcdSet16S(9, ((GetFrontPageTimeoutFromQemu ())))
                                                ;
 
  printf("%d\n", PcdStatus);
 
 }
 
+void test3() {
+
+
+ int size = ((sizeof ("a0") + (typeof (sizeof ("a0"))) 4 - 1) & ~((typeof (sizeof ("a0"))) 4 - 1));
+
+ printf("%d\n", size);
+}
+
 int main(void) {
 
 
- test2();
+
+
+
+
+ test3();
  return 0;
 }

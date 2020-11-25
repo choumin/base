@@ -46,11 +46,21 @@ void test2() {
 	
 }
 
+void test3() {
+	#define ALIGN_UP(addr, align) \
+    ((addr + (typeof (addr)) align - 1) & ~((typeof (addr)) align - 1))
+	int size = ALIGN_UP (sizeof ("a0"), 4);
+
+	printf("%d\n", size);
+}
+
 int main(void) {
 	//int abc = PcdGet64(ABC);
 	//printf("abc: %d\n", abc);
-	showArray();
-	test2();
-	showArray();
+	//showArray();
+	//test2();
+	//showArray();
+	//
+	test3();
 	return 0;
 }
