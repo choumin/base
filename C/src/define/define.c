@@ -49,11 +49,21 @@ void test2() {
 void test3() {
 	#define ALIGN_UP(addr, align) \
     ((addr + (typeof (addr)) align - 1) & ~((typeof (addr)) align - 1))
+
+	#define ALIGN_VALUE(Value, Alignment) ((Value) + (((Alignment) - (Value)) & ((Alignment) - 1)))
+
 	int size = ALIGN_UP (sizeof ("a0"), 4);
 
 	printf("%d\n", size);
 }
 
+void test4() {
+#define ARRAYSIZE(a) (sizeof(a) / sizeof(a[0]))
+
+	char *CommandLine = "console=tty0";
+	char *Args[] = {"a0", CommandLine};
+	printf("array size: %d\n", ARRAYSIZE(Args));
+}
 int main(void) {
 	//int abc = PcdGet64(ABC);
 	//printf("abc: %d\n", abc);
@@ -61,6 +71,6 @@ int main(void) {
 	//test2();
 	//showArray();
 	//
-	test3();
+	test4();
 	return 0;
 }
