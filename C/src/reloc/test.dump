@@ -1,0 +1,113 @@
+
+test：     文件格式 elf64-tradlittlemips
+
+
+Disassembly of section .MIPS.options:
+
+0000000120000000 <.MIPS.options>:
+   120000000:	00002801 	movf	a1,zero,$fcc0
+   120000004:	00000000 	nop
+   120000008:	90000012 	lbu	zero,18(zero)
+	...
+
+Disassembly of section .MIPS.abiflags:
+
+0000000120000028 <.MIPS.abiflags>:
+   120000028:	02400000 	0x2400000
+   12000002c:	01000202 	0x1000202
+	...
+   120000038:	00000001 	movf	zero,zero,$fcc0
+   12000003c:	00000000 	nop
+
+Disassembly of section tinytext:
+
+0000000120000040 <__export_parasite_head_start>:
+   120000040:	3c040000 	lui	a0,0x0
+   120000044:	3c012000 	lui	at,0x2000
+   120000048:	64840001 	daddiu	a0,a0,1
+   12000004c:	0004203c 	dsll32	a0,a0,0x0
+   120000050:	0081202d 	daddu	a0,a0,at
+   120000054:	8c84005c 	lw	a0,92(a0)
+   120000058:	03e00008 	jr	ra
+
+000000012000005c <__value>:
+   12000005c:	00000930 	tge	zero,zero,0x24
+
+Disassembly of section .gnu.attributes:
+
+0000000000000000 <.gnu.attributes>:
+   0:	00000f41 	0xf41
+   4:	756e6700 	jalx	5b99c00 <__export_parasite_head_start-0x11a466440>
+   8:	00070100 	sll	zero,a3,0x4
+   c:	01040000 	0x1040000
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000036 	tne	zero,zero
+   4:	001d0002 	srl	zero,sp,0x0
+   8:	01010000 	0x1010000
+   c:	000d0efb 	dsra	at,t1,0x1b
+  10:	01010101 	0x1010101
+  14:	01000000 	0x1000000
+  18:	00010000 	sll	zero,at,0x0
+  1c:	74736574 	jalx	1cd95d0 <__export_parasite_head_start-0x11e326a70>
+  20:	0000532e 	0x532e
+  24:	00000000 	nop
+  28:	00400209 	0x400209
+  2c:	00012000 	sll	a0,at,0x0
+  30:	08170000 	j	5c0000 <__export_parasite_head_start-0x11fa40040>
+  34:	00080275 	0x80275
+  38:	地址 0x0000000000000038 越界。
+
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000005f 	0x5f
+   4:	00000002 	srl	zero,zero,0x0
+   8:	01080000 	0x1080000
+   c:	00000000 	nop
+  10:	20000040 	addi	zero,zero,64
+  14:	00000001 	movf	zero,zero,$fcc0
+  18:	20000060 	addi	zero,zero,96
+  1c:	00000001 	movf	zero,zero,$fcc0
+  20:	74736574 	jalx	1cd95d0 <__export_parasite_head_start-0x11e326a70>
+  24:	2f00532e 	sltiu	zero,t8,21294
+  28:	656d6f68 	daddiu	t1,a7,28520
+  2c:	6f687a2f 	ldr	a4,31279(k1)
+  30:	6e696d75 	ldr	a5,28021(s3)
+  34:	7469672f 	jalx	1a59cbc <__export_parasite_head_start-0x11e5a6384>
+  38:	2f627568 	sltiu	v0,k1,30056
+  3c:	756f6863 	jalx	5bda18c <__export_parasite_head_start-0x11a425eb4>
+  40:	2f6e696d 	sltiu	t2,k1,26989
+  44:	65736162 	daddiu	s3,a7,24930
+  48:	732f432f 	0x732f432f
+  4c:	722f6372 	0x722f6372
+  50:	636f6c65 	daddi	t3,k1,27749
+  54:	554e4700 	bnel	a6,t2,11c58 <__export_parasite_head_start-0x11ffee3e8>
+  58:	20534120 	addi	s3,v0,16672
+  5c:	37322e32 	ori	s2,t9,0x2e32
+  60:	地址 0x0000000000000060 越界。
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	b	4408 <__export_parasite_head_start-0x11fffbc38>
+   4:	12011106 	beq	s0,at,4420 <__export_parasite_head_start-0x11fffbc20>
+   8:	1b080301 	0x1b080301
+   c:	13082508 	beq	t8,a4,9430 <__export_parasite_head_start-0x11fff6c10>
+  10:	00000005 	lsa	zero,zero,zero,0x1
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	dadd	zero,zero,zero
+   4:	00000002 	srl	zero,zero,0x0
+   8:	00080000 	sll	zero,a4,0x0
+   c:	00000000 	nop
+  10:	20000040 	addi	zero,zero,64
+  14:	00000001 	movf	zero,zero,$fcc0
+  18:	00000020 	add	zero,zero,zero
+	...
