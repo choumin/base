@@ -1,5 +1,7 @@
 #include <curses.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_LEN	32
 void test(void ) {
@@ -136,11 +138,59 @@ int test4()
 }
 
 void test5() {
+	initscr();
+	char ch = mvgetch(0, 0);
+	endwin();
+}
+
+void test6() {
+    int i;
+	printf("haha\n");
+    for(i=1;i<5;i++)
+    {
+        printf("这是第 %d 次输出...",i);
+		fflush(stdout);
+        sleep(1);      //延时1000ms
+        printf("\r"); 
+    }
 
 }
 
+// gcc ./main.c  -o main -lcurses
+void get_pass(char *passwd, int max_len) {
+	int i = 0, j = 0;
+	char ch = 0;
+	initscr();
+	noecho();
+	for (i = 0; i < max_len;) {
+		ch = getchar();
+		if (ch == 13) {
+			break;
+		}	
+		if (ch == 8 || ch == 127) {
+			if (i > 0) {
+				putchar('\r');
+				for (j = 0; j < i; ++j) {
+					putchar(' ');
+				}
+				passwd[--i] = 0;
+				putchar('\r');
+				for (j = 0; j < i; ++j) {
+					putchar('*');
+				}
+			}
+			continue;
+		}
+		passwd[i++] = ch;
+		putchar('*');
+	}
+	passwd[i] = 0;
+	endwin();
+}
 int main(void) {
-	test();
+	char passwd[32];
+	get_pass(passwd, 32);
+	printf("\nyou input: %s\n", passwd);
 
 	return 0;
 }
