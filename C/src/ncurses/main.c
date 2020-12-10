@@ -157,7 +157,7 @@ void test6() {
 }
 
 // gcc ./main.c  -o main -lcurses
-void get_pass(char *passwd, int max_len) {
+int get_pass(char *passwd, int max_len) {
 	int i = 0, j = 0;
 	char ch = 0;
 	initscr();
@@ -186,11 +186,13 @@ void get_pass(char *passwd, int max_len) {
 	}
 	passwd[i] = 0;
 	endwin();
+
+	return i;
 }
 int main(void) {
 	char passwd[32];
-	get_pass(passwd, 32);
-	printf("\nyou input: %s\n", passwd);
+	int len = get_pass(passwd, 32);
+	printf("\nyou input: %s, len: %d\n", passwd, len);
 
 	return 0;
 }
