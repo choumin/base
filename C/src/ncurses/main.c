@@ -156,6 +156,13 @@ void test6() {
 
 }
 
+void refill(char ch, int num) {
+	int i = 0;
+    putchar('\r');
+    for (i = 0; i < num; ++i) {
+	    putchar(ch);
+    }
+}
 // gcc ./main.c  -o main -lcurses
 int get_pass(char *passwd, int max_len) {
 	int i = 0, j = 0;
@@ -169,15 +176,21 @@ int get_pass(char *passwd, int max_len) {
 		}	
 		if (ch == 8 || ch == 127) {
 			if (i > 0) {
+				refill(' ', i);
+				/*
 				putchar('\r');
 				for (j = 0; j < i; ++j) {
 					putchar(' ');
 				}
+				*/
 				passwd[--i] = 0;
+				/*
 				putchar('\r');
 				for (j = 0; j < i; ++j) {
 					putchar('*');
 				}
+				*/
+				refill('*', i);
 			}
 			continue;
 		}
