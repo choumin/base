@@ -1,0 +1,8 @@
+tbl = ./syscall_32.tbl
+systbl = ./systbl.sh
+
+changed=true
+if_changed = $(if $changed, $(call $(1)) $< $@, @:)
+
+a.h:$(tbl) $(systbl)
+	$(call if_changed, systbl)

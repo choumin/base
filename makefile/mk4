@@ -1,0 +1,6 @@
+objs = a.o b.o c.o d.o e.o f.o g.o
+
+sub_objs := $(wordlist 1, 3, $(objs))
+
+$(warning $(sub_objs))
+

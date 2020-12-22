@@ -1,0 +1,614 @@
+
+./vsdo.dd：     文件格式 elf64-tradlittlemips
+
+
+Disassembly of section .MIPS.abiflags:
+
+00000000000001c8 <.MIPS.abiflags>:
+ 1c8:	02400000 	0x2400000
+ 1cc:	00000202 	srl	zero,zero,0x8
+	...
+
+Disassembly of section .hash:
+
+00000000000001e0 <.hash>:
+ 1e0:	00000003 	sra	zero,zero,0x0
+ 1e4:	00000005 	lsa	zero,zero,zero,0x1
+ 1e8:	00000003 	sra	zero,zero,0x0
+ 1ec:	00000000 	nop
+ 1f0:	00000004 	sllv	zero,zero,zero
+	...
+ 200:	00000002 	srl	zero,zero,0x0
+ 204:	00000000 	nop
+
+Disassembly of section .dynsym:
+
+0000000000000208 <.dynsym>:
+	...
+ 224:	00010003 	sra	zero,at,0x0
+ 228:	000001c8 	0x1c8
+	...
+ 238:	0000003a 	dsrl	zero,zero,0x0
+ 23c:	fff10011 	sd	s1,17(ra)
+	...
+ 250:	00000001 	movf	zero,zero,$fcc0
+ 254:	00080012 	0x80012
+ 258:	00000350 	0x350
+ 25c:	00000000 	nop
+ 260:	000001ac 	0x1ac
+ 264:	00000000 	nop
+ 268:	00000015 	dlsa	zero,zero,zero,0x1
+ 26c:	00080012 	0x80012
+ 270:	00000500 	sll	zero,zero,0x14
+ 274:	00000000 	nop
+ 278:	000003f8 	dsll	zero,zero,0xf
+ 27c:	00000000 	nop
+
+Disassembly of section .dynstr:
+
+0000000000000280 <.dynstr>:
+ 280:	765f5f00 	jalx	97d7c00 <__vdso_clock_gettime@@LINUX_2.6+0x97d7700>
+ 284:	5f6f7364 	0x5f6f7364
+ 288:	74746567 	jalx	1d1959c <__vdso_clock_gettime@@LINUX_2.6+0x1d1909c>
+ 28c:	6f656d69 	ldr	a1,28009(k1)
+ 290:	79616466 	st.w	$w17,1412(t0)
+ 294:	765f5f00 	jalx	97d7c00 <__vdso_clock_gettime@@LINUX_2.6+0x97d7700>
+ 298:	5f6f7364 	0x5f6f7364
+ 29c:	636f6c63 	daddi	t3,k1,27747
+ 2a0:	65675f6b 	daddiu	a3,a7,24427
+ 2a4:	6d697474 	ldr	a5,29812(a7)
+ 2a8:	696c0065 	ldl	t0,101(a7)
+ 2ac:	2d78756e 	sltiu	t8,a7,30062
+ 2b0:	6f736476 	ldr	s3,25718(k1)
+ 2b4:	2e6f732e 	sltiu	t3,s3,29486
+ 2b8:	494c0031 	0x494c0031
+ 2bc:	5f58554e 	0x5f58554e
+ 2c0:	00362e32 	tlt	at,s6,0xb8
+
+Disassembly of section .gnu.version:
+
+00000000000002c4 <.gnu.version>:
+ 2c4:	00000000 	nop
+ 2c8:	00020002 	srl	zero,v0,0x0
+ 2cc:	地址 0x00000000000002cc 越界。
+
+
+Disassembly of section .gnu.version_d:
+
+00000000000002d0 <.gnu.version_d>:
+ 2d0:	00010001 	movt	zero,zero,$fcc0
+ 2d4:	00010001 	movt	zero,zero,$fcc0
+ 2d8:	0deebfa1 	jal	7bafe84 <__vdso_clock_gettime@@LINUX_2.6+0x7baf984>
+ 2dc:	00000014 	dsllv	zero,zero,zero
+ 2e0:	0000001c 	dmult	zero,zero
+ 2e4:	0000002a 	slt	zero,zero,zero
+ 2e8:	00000000 	nop
+ 2ec:	00000001 	movf	zero,zero,$fcc0
+ 2f0:	00010002 	srl	zero,at,0x0
+ 2f4:	03ae75f6 	tne	sp,t2,0x1d7
+ 2f8:	00000014 	dsllv	zero,zero,zero
+ 2fc:	00000000 	nop
+ 300:	0000003a 	dsrl	zero,zero,0x0
+ 304:	00000000 	nop
+
+Disassembly of section .note:
+
+0000000000000308 <.note>:
+ 308:	00000006 	srlv	zero,zero,zero
+ 30c:	00000004 	sllv	zero,zero,zero
+ 310:	00000000 	nop
+ 314:	756e694c 	jalx	5b9a530 <__vdso_clock_gettime@@LINUX_2.6+0x5b9a030>
+ 318:	00000078 	dsll	zero,zero,0x1
+ 31c:	000413a1 	0x413a1
+ 320:	00000004 	sllv	zero,zero,zero
+ 324:	00000014 	dsllv	zero,zero,zero
+ 328:	00000003 	sra	zero,zero,0x0
+ 32c:	00554e47 	0x554e47
+ 330:	14020bc0 	bne	zero,v0,3234 <__vdso_clock_gettime@@LINUX_2.6+0x2d34>
+ 334:	283a901b 	slti	k0,at,-28645
+ 338:	830046fc 	lb	zero,18172(t8)
+ 33c:	ca1fce80 	lwc2	$31,-12672(s0)
+ 340:	02f7e975 	0x2f7e975
+
+Disassembly of section .text:
+
+0000000000000350 <__vdso_gettimeofday@@LINUX_2.6>:
+ 350:	67bdfff0 	daddiu	sp,sp,-16
+ 354:	24080003 	li	a4,3
+ 358:	24090004 	li	a5,4
+ 35c:	ffbf0008 	sd	ra,8(sp)
+ 360:	240c0001 	li	t0,1
+ 364:	04110002 	bal	370 <__vdso_gettimeofday@@LINUX_2.6+0x20>
+ 368:	00000000 	nop
+ 36c:	fffffc94 	sd	ra,-876(ra)
+ 370:	8fe60000 	lw	a2,0(ra)
+ 374:	03e6302d 	daddu	a2,ra,a2
+ 378:	64c6c000 	daddiu	a2,a2,-16384
+ 37c:	8cc30020 	lw	v1,32(a2)
+ 380:	30620001 	andi	v0,v1,0x1
+ 384:	1440004e 	bnez	v0,4c0 <__vdso_gettimeofday@@LINUX_2.6+0x170>
+ 388:	00000000 	nop
+ 38c:	0000000f 	sync
+ 390:	90c20028 	lbu	v0,40(a2)
+ 394:	10400052 	beqz	v0,4e0 <__vdso_gettimeofday@@LINUX_2.6+0x190>
+ 398:	00000000 	nop
+ 39c:	10480040 	beq	v0,a4,4a0 <__vdso_gettimeofday@@LINUX_2.6+0x150>
+ 3a0:	dcca0000 	ld	a6,0(a2)
+ 3a4:	1049003a 	beq	v0,a5,490 <__vdso_gettimeofday@@LINUX_2.6+0x140>
+ 3a8:	00000000 	nop
+ 3ac:	104c002a 	beq	v0,t0,458 <__vdso_gettimeofday@@LINUX_2.6+0x108>
+ 3b0:	00000000 	nop
+ 3b4:	00001025 	move	v0,zero
+ 3b8:	0000000f 	sync
+ 3bc:	8cc70020 	lw	a3,32(a2)
+ 3c0:	14e3ffee 	bne	a3,v1,37c <__vdso_gettimeofday@@LINUX_2.6+0x2c>
+ 3c4:	3c073b9a 	lui	a3,0x3b9a
+ 3c8:	34e7ca00 	ori	a3,a3,0xca00
+ 3cc:	0047402b 	sltu	a4,v0,a3
+ 3d0:	1500000b 	bnez	a4,400 <__vdso_gettimeofday@@LINUX_2.6+0xb0>
+ 3d4:	01401825 	move	v1,a6
+ 3d8:	3c09c465 	lui	a5,0xc465
+ 3dc:	00001825 	move	v1,zero
+ 3e0:	65293600 	daddiu	a5,a5,13824
+ 3e4:	00000000 	nop
+ 3e8:	0049102d 	daddu	v0,v0,a5
+ 3ec:	0047402b 	sltu	a4,v0,a3
+ 3f0:	1100fffd 	beqz	a4,3e8 <__vdso_gettimeofday@@LINUX_2.6+0x98>
+ 3f4:	24630001 	addiu	v1,v1,1
+ 3f8:	7c63f803 	dext	v1,v1,0x0,0x20
+ 3fc:	0143182d 	daddu	v1,a6,v1
+ 400:	1080000c 	beqz	a0,434 <__vdso_gettimeofday@@LINUX_2.6+0xe4>
+ 404:	3c070831 	lui	a3,0x831
+ 408:	64e726e9 	daddiu	a3,a3,9961
+ 40c:	00073c38 	dsll	a3,a3,0x10
+ 410:	64e778d5 	daddiu	a3,a3,30933
+ 414:	00073cb8 	dsll	a3,a3,0x12
+ 418:	000210fa 	dsrl	v0,v0,0x3
+ 41c:	64e7f7cf 	daddiu	a3,a3,-2097
+ 420:	0047001d 	dmultu	v0,a3
+ 424:	fc830000 	sd	v1,0(a0)
+ 428:	00001010 	mfhi	v0
+ 42c:	0002113a 	dsrl	v0,v0,0x4
+ 430:	fc820008 	sd	v0,8(a0)
+ 434:	10a0001e 	beqz	a1,4b0 <__vdso_gettimeofday@@LINUX_2.6+0x160>
+ 438:	00001025 	move	v0,zero
+ 43c:	8cc30040 	lw	v1,64(a2)
+ 440:	aca30000 	sw	v1,0(a1)
+ 444:	8cc30044 	lw	v1,68(a2)
+ 448:	aca30004 	sw	v1,4(a1)
+ 44c:	dfbf0008 	ld	ra,8(sp)
+ 450:	03e00008 	jr	ra
+ 454:	67bd0010 	daddiu	sp,sp,16
+ 458:	7c02103b 	rdhwr	v0,hwr_cc
+ 45c:	7c42f803 	dext	v0,v0,0x0,0x20
+ 460:	dcc70030 	ld	a3,48(a2)
+ 464:	dccb0038 	ld	a7,56(a2)
+ 468:	0047102f 	dsubu	v0,v0,a3
+ 46c:	9cc7002c 	lwu	a3,44(a2)
+ 470:	004b1024 	and	v0,v0,a7
+ 474:	0047001c 	dmult	v0,a3
+ 478:	dccb0008 	ld	a7,8(a2)
+ 47c:	8cc70024 	lw	a3,36(a2)
+ 480:	00001012 	mflo	v0
+ 484:	004b102d 	daddu	v0,v0,a7
+ 488:	1000ffcb 	b	3b8 <__vdso_gettimeofday@@LINUX_2.6+0x68>
+ 48c:	00e21016 	dsrlv	v0,v0,a3
+ 490:	dcc2d0f0 	ld	v0,-12048(a2)
+ 494:	0000000f 	sync
+ 498:	1000fff2 	b	464 <__vdso_gettimeofday@@LINUX_2.6+0x114>
+ 49c:	dcc70030 	ld	a3,48(a2)
+ 4a0:	7c02f03b 	rdhwr	v0,$30
+ 4a4:	1000ffef 	b	464 <__vdso_gettimeofday@@LINUX_2.6+0x114>
+ 4a8:	dcc70030 	ld	a3,48(a2)
+ 4ac:	00000000 	nop
+ 4b0:	dfbf0008 	ld	ra,8(sp)
+ 4b4:	03e00008 	jr	ra
+ 4b8:	67bd0010 	daddiu	sp,sp,16
+ 4bc:	00000000 	nop
+ 4c0:	0000000f 	sync
+ 4c4:	8cc30020 	lw	v1,32(a2)
+ 4c8:	30620001 	andi	v0,v1,0x1
+ 4cc:	1040ffaf 	beqz	v0,38c <__vdso_gettimeofday@@LINUX_2.6+0x3c>
+ 4d0:	00000000 	nop
+ 4d4:	1000fffa 	b	4c0 <__vdso_gettimeofday@@LINUX_2.6+0x170>
+ 4d8:	00000000 	nop
+ 4dc:	00000000 	nop
+ 4e0:	240213e6 	li	v0,5094
+ 4e4:	0000000c 	syscall
+ 4e8:	10e00002 	beqz	a3,4f4 <__vdso_gettimeofday@@LINUX_2.6+0x1a4>
+ 4ec:	00000000 	nop
+ 4f0:	0002102f 	dnegu	v0,v0
+ 4f4:	1000ffd5 	b	44c <__vdso_gettimeofday@@LINUX_2.6+0xfc>
+ 4f8:	00021000 	sll	v0,v0,0x0
+ 4fc:	00000000 	nop
+
+0000000000000500 <__vdso_clock_gettime@@LINUX_2.6>:
+ 500:	67bdfff0 	daddiu	sp,sp,-16
+ 504:	24030001 	li	v1,1
+ 508:	ffbf0008 	sd	ra,8(sp)
+ 50c:	04110002 	bal	518 <__vdso_clock_gettime@@LINUX_2.6+0x18>
+ 510:	00000000 	nop
+ 514:	fffffaec 	sd	ra,-1300(ra)
+ 518:	8fe20000 	lw	v0,0(ra)
+ 51c:	03e2102d 	daddu	v0,ra,v0
+ 520:	10830079 	beq	a0,v1,708 <__vdso_clock_gettime@@LINUX_2.6+0x208>
+ 524:	6442c000 	daddiu	v0,v0,-16384
+ 528:	28830002 	slti	v1,a0,2
+ 52c:	14600046 	bnez	v1,648 <__vdso_clock_gettime@@LINUX_2.6+0x148>
+ 530:	24030005 	li	v1,5
+ 534:	1083002a 	beq	a0,v1,5e0 <__vdso_clock_gettime@@LINUX_2.6+0xe0>
+ 538:	24030006 	li	v1,6
+ 53c:	1483003a 	bne	a0,v1,628 <__vdso_clock_gettime@@LINUX_2.6+0x128>
+ 540:	00000000 	nop
+ 544:	8c440020 	lw	a0,32(v0)
+ 548:	30830001 	andi	v1,a0,0x1
+ 54c:	146000d8 	bnez	v1,8b0 <__vdso_clock_gettime@@LINUX_2.6+0x3b0>
+ 550:	00000000 	nop
+ 554:	0000000f 	sync
+ 558:	dc430000 	ld	v1,0(v0)
+ 55c:	fca30000 	sd	v1,0(a1)
+ 560:	dc430008 	ld	v1,8(v0)
+ 564:	8c460024 	lw	a2,36(v0)
+ 568:	00c31816 	dsrlv	v1,v1,a2
+ 56c:	fca30008 	sd	v1,8(a1)
+ 570:	dc480010 	ld	a4,16(v0)
+ 574:	dc430018 	ld	v1,24(v0)
+ 578:	0000000f 	sync
+ 57c:	8c460020 	lw	a2,32(v0)
+ 580:	14c4fff0 	bne	a2,a0,544 <__vdso_clock_gettime@@LINUX_2.6+0x44>
+ 584:	3c043b9a 	lui	a0,0x3b9a
+ 588:	dca20008 	ld	v0,8(a1)
+ 58c:	dca60000 	ld	a2,0(a1)
+ 590:	0062102d 	daddu	v0,v1,v0
+ 594:	3484ca00 	ori	a0,a0,0xca00
+ 598:	0044182b 	sltu	v1,v0,a0
+ 59c:	1460000a 	bnez	v1,5c8 <__vdso_clock_gettime@@LINUX_2.6+0xc8>
+ 5a0:	0106402d 	daddu	a4,a4,a2
+ 5a4:	3c07c465 	lui	a3,0xc465
+ 5a8:	00001825 	move	v1,zero
+ 5ac:	64e73600 	daddiu	a3,a3,13824
+ 5b0:	0047102d 	daddu	v0,v0,a3
+ 5b4:	0044302b 	sltu	a2,v0,a0
+ 5b8:	10c0fffd 	beqz	a2,5b0 <__vdso_clock_gettime@@LINUX_2.6+0xb0>
+ 5bc:	24630001 	addiu	v1,v1,1
+ 5c0:	7c63f803 	dext	v1,v1,0x0,0x20
+ 5c4:	0103402d 	daddu	a4,a4,v1
+ 5c8:	fca80000 	sd	a4,0(a1)
+ 5cc:	fca20008 	sd	v0,8(a1)
+ 5d0:	dfbf0008 	ld	ra,8(sp)
+ 5d4:	00001025 	move	v0,zero
+ 5d8:	03e00008 	jr	ra
+ 5dc:	67bd0010 	daddiu	sp,sp,16
+ 5e0:	8c430020 	lw	v1,32(v0)
+ 5e4:	30640001 	andi	a0,v1,0x1
+ 5e8:	148000b9 	bnez	a0,8d0 <__vdso_clock_gettime@@LINUX_2.6+0x3d0>
+ 5ec:	00000000 	nop
+ 5f0:	0000000f 	sync
+ 5f4:	dc440000 	ld	a0,0(v0)
+ 5f8:	fca40000 	sd	a0,0(a1)
+ 5fc:	dc440008 	ld	a0,8(v0)
+ 600:	8c460024 	lw	a2,36(v0)
+ 604:	00c42016 	dsrlv	a0,a0,a2
+ 608:	fca40008 	sd	a0,8(a1)
+ 60c:	0000000f 	sync
+ 610:	8c440020 	lw	a0,32(v0)
+ 614:	1083ffef 	beq	a0,v1,5d4 <__vdso_clock_gettime@@LINUX_2.6+0xd4>
+ 618:	dfbf0008 	ld	ra,8(sp)
+ 61c:	1000fff0 	b	5e0 <__vdso_clock_gettime@@LINUX_2.6+0xe0>
+ 620:	00000000 	nop
+ 624:	00000000 	nop
+ 628:	24021466 	li	v0,5222
+ 62c:	0000000c 	syscall
+ 630:	10e00002 	beqz	a3,63c <__vdso_clock_gettime@@LINUX_2.6+0x13c>
+ 634:	dfbf0008 	ld	ra,8(sp)
+ 638:	0002102f 	dnegu	v0,v0
+ 63c:	00021000 	sll	v0,v0,0x0
+ 640:	03e00008 	jr	ra
+ 644:	67bd0010 	daddiu	sp,sp,16
+ 648:	1480fff7 	bnez	a0,628 <__vdso_clock_gettime@@LINUX_2.6+0x128>
+ 64c:	24080003 	li	a4,3
+ 650:	24090004 	li	a5,4
+ 654:	240b0001 	li	a7,1
+ 658:	8c460020 	lw	a2,32(v0)
+ 65c:	30c30001 	andi	v1,a2,0x1
+ 660:	1460008b 	bnez	v1,890 <__vdso_clock_gettime@@LINUX_2.6+0x390>
+ 664:	00000000 	nop
+ 668:	0000000f 	sync
+ 66c:	90430028 	lbu	v1,40(v0)
+ 670:	1060ffed 	beqz	v1,628 <__vdso_clock_gettime@@LINUX_2.6+0x128>
+ 674:	00000000 	nop
+ 678:	dc430000 	ld	v1,0(v0)
+ 67c:	fca30000 	sd	v1,0(a1)
+ 680:	90430028 	lbu	v1,40(v0)
+ 684:	1068005c 	beq	v1,a4,7f8 <__vdso_clock_gettime@@LINUX_2.6+0x2f8>
+ 688:	00000000 	nop
+ 68c:	1069006c 	beq	v1,a5,840 <__vdso_clock_gettime@@LINUX_2.6+0x340>
+ 690:	00000000 	nop
+ 694:	106b0066 	beq	v1,a7,830 <__vdso_clock_gettime@@LINUX_2.6+0x330>
+ 698:	00000000 	nop
+ 69c:	00001825 	move	v1,zero
+ 6a0:	0000000f 	sync
+ 6a4:	8c470020 	lw	a3,32(v0)
+ 6a8:	14e6ffeb 	bne	a3,a2,658 <__vdso_clock_gettime@@LINUX_2.6+0x158>
+ 6ac:	00000000 	nop
+ 6b0:	3c043b9a 	lui	a0,0x3b9a
+ 6b4:	3484ca00 	ori	a0,a0,0xca00
+ 6b8:	0064102b 	sltu	v0,v1,a0
+ 6bc:	1440008c 	bnez	v0,8f0 <__vdso_clock_gettime@@LINUX_2.6+0x3f0>
+ 6c0:	00000000 	nop
+ 6c4:	3c07c465 	lui	a3,0xc465
+ 6c8:	00001025 	move	v0,zero
+ 6cc:	64e73600 	daddiu	a3,a3,13824
+ 6d0:	0067182d 	daddu	v1,v1,a3
+ 6d4:	0064302b 	sltu	a2,v1,a0
+ 6d8:	10c0fffd 	beqz	a2,6d0 <__vdso_clock_gettime@@LINUX_2.6+0x1d0>
+ 6dc:	24420001 	addiu	v0,v0,1
+ 6e0:	7c42f803 	dext	v0,v0,0x0,0x20
+ 6e4:	dca40000 	ld	a0,0(a1)
+ 6e8:	dfbf0008 	ld	ra,8(sp)
+ 6ec:	0082102d 	daddu	v0,a0,v0
+ 6f0:	fca20000 	sd	v0,0(a1)
+ 6f4:	00001025 	move	v0,zero
+ 6f8:	fca30008 	sd	v1,8(a1)
+ 6fc:	03e00008 	jr	ra
+ 700:	67bd0010 	daddiu	sp,sp,16
+ 704:	00000000 	nop
+ 708:	240a0003 	li	a6,3
+ 70c:	240b0004 	li	a7,4
+ 710:	240c0001 	li	t0,1
+ 714:	8c470020 	lw	a3,32(v0)
+ 718:	30e30001 	andi	v1,a3,0x1
+ 71c:	14600054 	bnez	v1,870 <__vdso_clock_gettime@@LINUX_2.6+0x370>
+ 720:	00000000 	nop
+ 724:	0000000f 	sync
+ 728:	90430028 	lbu	v1,40(v0)
+ 72c:	1060ffbe 	beqz	v1,628 <__vdso_clock_gettime@@LINUX_2.6+0x128>
+ 730:	00000000 	nop
+ 734:	dc430000 	ld	v1,0(v0)
+ 738:	fca30000 	sd	v1,0(a1)
+ 73c:	90430028 	lbu	v1,40(v0)
+ 740:	106a001f 	beq	v1,a6,7c0 <__vdso_clock_gettime@@LINUX_2.6+0x2c0>
+ 744:	00000000 	nop
+ 748:	106b0045 	beq	v1,a7,860 <__vdso_clock_gettime@@LINUX_2.6+0x360>
+ 74c:	00000000 	nop
+ 750:	106c003f 	beq	v1,t0,850 <__vdso_clock_gettime@@LINUX_2.6+0x350>
+ 754:	00000000 	nop
+ 758:	00003025 	move	a2,zero
+ 75c:	dc480010 	ld	a4,16(v0)
+ 760:	dc430018 	ld	v1,24(v0)
+ 764:	0000000f 	sync
+ 768:	8c490020 	lw	a5,32(v0)
+ 76c:	1527ffe9 	bne	a5,a3,714 <__vdso_clock_gettime@@LINUX_2.6+0x214>
+ 770:	00000000 	nop
+ 774:	3c043b9a 	lui	a0,0x3b9a
+ 778:	dca70000 	ld	a3,0(a1)
+ 77c:	0066102d 	daddu	v0,v1,a2
+ 780:	3484ca00 	ori	a0,a0,0xca00
+ 784:	0044182b 	sltu	v1,v0,a0
+ 788:	1460ff8f 	bnez	v1,5c8 <__vdso_clock_gettime@@LINUX_2.6+0xc8>
+ 78c:	0107402d 	daddu	a4,a4,a3
+ 790:	3c07c465 	lui	a3,0xc465
+ 794:	00001825 	move	v1,zero
+ 798:	64e73600 	daddiu	a3,a3,13824
+ 79c:	00000000 	nop
+ 7a0:	0047102d 	daddu	v0,v0,a3
+ 7a4:	0044302b 	sltu	a2,v0,a0
+ 7a8:	10c0fffd 	beqz	a2,7a0 <__vdso_clock_gettime@@LINUX_2.6+0x2a0>
+ 7ac:	24630001 	addiu	v1,v1,1
+ 7b0:	7c63f803 	dext	v1,v1,0x0,0x20
+ 7b4:	1000ff84 	b	5c8 <__vdso_clock_gettime@@LINUX_2.6+0xc8>
+ 7b8:	0103402d 	daddu	a4,a4,v1
+ 7bc:	00000000 	nop
+ 7c0:	7c06f03b 	rdhwr	a2,$30
+ 7c4:	dc430030 	ld	v1,48(v0)
+ 7c8:	dc480038 	ld	a4,56(v0)
+ 7cc:	00c3302f 	dsubu	a2,a2,v1
+ 7d0:	9c43002c 	lwu	v1,44(v0)
+ 7d4:	00c83024 	and	a2,a2,a4
+ 7d8:	00c3001c 	dmult	a2,v1
+ 7dc:	dc480008 	ld	a4,8(v0)
+ 7e0:	8c430024 	lw	v1,36(v0)
+ 7e4:	00003012 	mflo	a2
+ 7e8:	00c8302d 	daddu	a2,a2,a4
+ 7ec:	1000ffdb 	b	75c <__vdso_clock_gettime@@LINUX_2.6+0x25c>
+ 7f0:	00663016 	dsrlv	a2,a2,v1
+ 7f4:	00000000 	nop
+ 7f8:	7c03f03b 	rdhwr	v1,$30
+ 7fc:	dc470030 	ld	a3,48(v0)
+ 800:	dc4a0038 	ld	a6,56(v0)
+ 804:	0067182f 	dsubu	v1,v1,a3
+ 808:	9c47002c 	lwu	a3,44(v0)
+ 80c:	006a1824 	and	v1,v1,a6
+ 810:	0067001c 	dmult	v1,a3
+ 814:	dc4a0008 	ld	a6,8(v0)
+ 818:	8c470024 	lw	a3,36(v0)
+ 81c:	00001812 	mflo	v1
+ 820:	006a182d 	daddu	v1,v1,a6
+ 824:	1000ff9e 	b	6a0 <__vdso_clock_gettime@@LINUX_2.6+0x1a0>
+ 828:	00e31816 	dsrlv	v1,v1,a3
+ 82c:	00000000 	nop
+ 830:	7c03103b 	rdhwr	v1,hwr_cc
+ 834:	1000fff1 	b	7fc <__vdso_clock_gettime@@LINUX_2.6+0x2fc>
+ 838:	7c63f803 	dext	v1,v1,0x0,0x20
+ 83c:	00000000 	nop
+ 840:	dc43d0f0 	ld	v1,-12048(v0)
+ 844:	0000000f 	sync
+ 848:	1000ffed 	b	800 <__vdso_clock_gettime@@LINUX_2.6+0x300>
+ 84c:	dc470030 	ld	a3,48(v0)
+ 850:	7c06103b 	rdhwr	a2,hwr_cc
+ 854:	1000ffdb 	b	7c4 <__vdso_clock_gettime@@LINUX_2.6+0x2c4>
+ 858:	7cc6f803 	dext	a2,a2,0x0,0x20
+ 85c:	00000000 	nop
+ 860:	dc46d0f0 	ld	a2,-12048(v0)
+ 864:	0000000f 	sync
+ 868:	1000ffd7 	b	7c8 <__vdso_clock_gettime@@LINUX_2.6+0x2c8>
+ 86c:	dc430030 	ld	v1,48(v0)
+ 870:	0000000f 	sync
+ 874:	8c470020 	lw	a3,32(v0)
+ 878:	30e30001 	andi	v1,a3,0x1
+ 87c:	1060ffa9 	beqz	v1,724 <__vdso_clock_gettime@@LINUX_2.6+0x224>
+ 880:	00000000 	nop
+ 884:	1000fffa 	b	870 <__vdso_clock_gettime@@LINUX_2.6+0x370>
+ 888:	00000000 	nop
+ 88c:	00000000 	nop
+ 890:	0000000f 	sync
+ 894:	8c460020 	lw	a2,32(v0)
+ 898:	30c30001 	andi	v1,a2,0x1
+ 89c:	1060ff72 	beqz	v1,668 <__vdso_clock_gettime@@LINUX_2.6+0x168>
+ 8a0:	00000000 	nop
+ 8a4:	1000fffa 	b	890 <__vdso_clock_gettime@@LINUX_2.6+0x390>
+ 8a8:	00000000 	nop
+ 8ac:	00000000 	nop
+ 8b0:	0000000f 	sync
+ 8b4:	8c440020 	lw	a0,32(v0)
+ 8b8:	30830001 	andi	v1,a0,0x1
+ 8bc:	1060ff25 	beqz	v1,554 <__vdso_clock_gettime@@LINUX_2.6+0x54>
+ 8c0:	00000000 	nop
+ 8c4:	1000fffa 	b	8b0 <__vdso_clock_gettime@@LINUX_2.6+0x3b0>
+ 8c8:	00000000 	nop
+ 8cc:	00000000 	nop
+ 8d0:	0000000f 	sync
+ 8d4:	8c430020 	lw	v1,32(v0)
+ 8d8:	30640001 	andi	a0,v1,0x1
+ 8dc:	1080ff44 	beqz	a0,5f0 <__vdso_clock_gettime@@LINUX_2.6+0xf0>
+ 8e0:	00000000 	nop
+ 8e4:	1000fffa 	b	8d0 <__vdso_clock_gettime@@LINUX_2.6+0x3d0>
+ 8e8:	00000000 	nop
+ 8ec:	00000000 	nop
+ 8f0:	1000ff7c 	b	6e4 <__vdso_clock_gettime@@LINUX_2.6+0x1e4>
+ 8f4:	00001025 	move	v0,zero
+	...
+ 900:	2402145b 	li	v0,5211
+ 904:	0000000c 	syscall
+	...
+
+Disassembly of section .dynamic:
+
+0000000000000910 <.dynamic>:
+ 910:	0000000e 	0xe
+ 914:	00000000 	nop
+ 918:	0000002a 	slt	zero,zero,zero
+ 91c:	00000000 	nop
+ 920:	00000010 	mfhi	zero
+	...
+ 930:	00000004 	sllv	zero,zero,zero
+ 934:	00000000 	nop
+ 938:	000001e0 	0x1e0
+ 93c:	00000000 	nop
+ 940:	00000005 	lsa	zero,zero,zero,0x1
+ 944:	00000000 	nop
+ 948:	00000280 	sll	zero,zero,0xa
+ 94c:	00000000 	nop
+ 950:	00000006 	srlv	zero,zero,zero
+ 954:	00000000 	nop
+ 958:	00000208 	0x208
+ 95c:	00000000 	nop
+ 960:	0000000a 	movz	zero,zero,zero
+ 964:	00000000 	nop
+ 968:	00000044 	0x44
+ 96c:	00000000 	nop
+ 970:	0000000b 	movn	zero,zero,zero
+ 974:	00000000 	nop
+ 978:	00000018 	mult	zero,zero
+ 97c:	00000000 	nop
+ 980:	00000003 	sra	zero,zero,0x0
+ 984:	00000000 	nop
+ 988:	00000a90 	0xa90
+ 98c:	00000000 	nop
+ 990:	70000001 	maddu	zero,zero
+ 994:	00000000 	nop
+ 998:	00000001 	movf	zero,zero,$fcc0
+ 99c:	00000000 	nop
+ 9a0:	70000005 	msubu	zero,zero
+ 9a4:	00000000 	nop
+ 9a8:	00000002 	srl	zero,zero,0x0
+ 9ac:	00000000 	nop
+ 9b0:	70000006 	0x70000006
+	...
+ 9c0:	7000000a 	0x7000000a
+ 9c4:	00000000 	nop
+ 9c8:	00000002 	srl	zero,zero,0x0
+ 9cc:	00000000 	nop
+ 9d0:	70000011 	udi1	zero,zero,zero,0x0
+ 9d4:	00000000 	nop
+ 9d8:	00000005 	lsa	zero,zero,zero,0x1
+ 9dc:	00000000 	nop
+ 9e0:	70000012 	udi2	zero,zero,zero,0x0
+ 9e4:	00000000 	nop
+ 9e8:	00000016 	dsrlv	zero,zero,zero
+ 9ec:	00000000 	nop
+ 9f0:	70000013 	udi3	zero,zero,zero,0x0
+ 9f4:	00000000 	nop
+ 9f8:	00000005 	lsa	zero,zero,zero,0x1
+ 9fc:	00000000 	nop
+ a00:	6ffffffc 	ldr	ra,-4(ra)
+ a04:	00000000 	nop
+ a08:	000002d0 	0x2d0
+ a0c:	00000000 	nop
+ a10:	6ffffffd 	ldr	ra,-3(ra)
+ a14:	00000000 	nop
+ a18:	00000002 	srl	zero,zero,0x0
+ a1c:	00000000 	nop
+ a20:	6ffffff0 	ldr	ra,-16(ra)
+ a24:	00000000 	nop
+ a28:	000002c4 	0x2c4
+	...
+
+Disassembly of section .got:
+
+0000000000000a90 <.got>:
+	...
+ a9c:	80000000 	lb	zero,0(zero)
+
+Disassembly of section .MIPS.options:
+
+0000000000000aa0 <.MIPS.options>:
+ aa0:	00002801 	movf	a1,zero,$fcc0
+	...
+ ac8:	00002801 	movf	a1,zero,$fcc0
+ acc:	00000000 	nop
+ ad0:	a0001ffc 	sb	zero,8188(zero)
+	...
+ af0:	00002801 	movf	a1,zero,$fcc0
+ af4:	00000000 	nop
+ af8:	00000004 	sllv	zero,zero,zero
+	...
+
+Disassembly of section .pdr:
+
+0000000000000000 <.pdr>:
+   0:	00000350 	0x350
+   4:	90000000 	lbu	zero,0(zero)
+   8:	fffffff8 	sd	ra,-8(ra)
+	...
+  14:	00000010 	mfhi	zero
+  18:	0000001d 	dmultu	zero,zero
+  1c:	0000001f 	ddivu	zero,zero,zero
+  20:	00000500 	sll	zero,zero,0x14
+  24:	90000000 	lbu	zero,0(zero)
+  28:	fffffff8 	sd	ra,-8(ra)
+	...
+  34:	00000010 	mfhi	zero
+  38:	0000001d 	dmultu	zero,zero
+  3c:	0000001f 	ddivu	zero,zero,zero
+  40:	00000900 	sll	at,zero,0x4
+	...
+  58:	0000001d 	dmultu	zero,zero
+  5c:	0000001f 	ddivu	zero,zero,zero
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	3a434347 	xori	v1,s2,0x4347
+   4:	6f6c2820 	ldr	t0,10272(k1)
+   8:	73676e6f 	0x73676e6f
+   c:	63206e6f 	daddi	zero,t9,28271
+  10:	73736f72 	0x73736f72
+  14:	6f6f7420 	ldr	t3,29728(k1)
+  18:	6168636c 	daddi	a4,a7,25452
+  1c:	20296e69 	addi	a5,at,28265
+  20:	2e332e37 	sltiu	s3,s1,11831
+  24:	30322031 	andi	s2,at,0x2031
+  28:	33303831 	andi	s0,t9,0x3831
+  2c:	地址 0x000000000000002c 越界。
+

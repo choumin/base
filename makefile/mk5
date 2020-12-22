@@ -1,0 +1,28 @@
+files = ./mk4 ./mk5 ./mk3
+
+dirs = $(dir $(files))
+
+$(warning $(dirs))
+
+f = ./mk4
+fns = $(notdir $(files))
+
+$(warning $(fns))
+
+f1 = ./systbl.sh
+$(warning $(suffix $(f1)))
+$(warning $(basename $(f1)))
+
+$(warning $(addsuffix .mk, $(files)))
+
+$(warning $(addprefix /home/zhoumin/, $(files)))
+
+pl = a b 
+$(warning $(join a b c, d e f))
+
+$(warning $(sort 1 b c a e d))
+
+letters := $(foreach letter,a b c d,$(letter))
+show-words:
+	# letters has $(words $(letters)) words: '$(letters)'
+
