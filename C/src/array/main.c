@@ -1,21 +1,32 @@
 #include <stdio.h>
 
-#define NR_MAX	5
+#define NR_MAX	50000
 
 void test(void) {
 	int i = 0;
+/*
 	int a[NR_MAX + 1] = {
-		[0 ... NR_MAX] = i++,
+		[0 ... NR_MAX - 3] = i++,
 	};
-
+*/
+	int a[NR_MAX];
 	for (i = 0; i < NR_MAX; ++i) {
-		printf("%d ", a[i]);
+		if (a[i]) {
+			printf("%d no!\n", i);	
+			break;
+		}
 	}
-	printf("\n");
+	printf("yes!\n");
+}
+
+void test2(void) {
+	int a[] = {[100] = 5};
+
+	printf("sizeof a: %d\n", sizeof(a));
 }
 
 int main(void) {
-	test();
+	test2();
 
 	return 0;
 }
