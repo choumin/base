@@ -6,7 +6,12 @@ function add_main() {
 	
 echo '''#include <stdio.h>
 
+void test(void) {
+
+}
+
 int main(void) {
+	test();
 	
 	return 0;
 }
