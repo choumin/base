@@ -41,4 +41,5 @@ C/src/unlink/main
 C/src/variable/main
 C/src/vdso/main
 C/src/void/main
-
+C/src/test2/main
+C/src/test3/main
