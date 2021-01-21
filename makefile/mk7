@@ -1,0 +1,10 @@
+if_changed = echo $1 $2 $(OBJCOPYFLAGS)
+
+%.raw: OBJCOPYFLAGS := -S
+%.raw: %.dbg.raw 
+	@$(call if_changed,$@, $^)
+
+targets += a.raw
+targets += b.raw
+
+all: $(targets)

@@ -1,0 +1,2 @@
+all: a.raw b.raw
+	$(foreach file,$(filter %.raw,$^),cp $(file) $(file:%.raw=%) &&) echo ""

@@ -1,0 +1,528 @@
+由于文件 (符号) 而包含了归档成员
+
+/usr/lib64/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o (__libc_csu_init)
+
+舍弃的输入节
+
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /tmp/ccEmEVxG.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+内存配置
+
+名称           来源             长度             属性
+*default*        0x0000000000000000 0xffffffffffffffff
+
+链结器命令稿和内存映射
+
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+LOAD /tmp/ccEmEVxG.o
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/libgcc.a
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/libgcc_s.so
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/libc.so
+START GROUP
+LOAD /lib64/libc.so.6
+LOAD /usr/lib64/libc_nonshared.a
+LOAD /lib64/ld.so.1
+END GROUP
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/libgcc.a
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/libgcc_s.so
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+LOAD /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+                [!provide]                        PROVIDE (__executable_start, 0x120000000)
+                0x00000001200002a8                . = (0x120000000 + SIZEOF_HEADERS)
+
+.MIPS.abiflags  0x00000001200002a8       0x18
+ *(.MIPS.abiflags)
+ .MIPS.abiflags
+                0x00000001200002a8       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.MIPS.options   0x00000001200002c0      0x168
+ *(.MIPS.options)
+ .MIPS.options  0x00000001200002c0       0x78 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ .MIPS.options  0x0000000120000338       0x28 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .MIPS.options  0x0000000120000360       0x28 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .MIPS.options  0x0000000120000388       0x28 /tmp/ccEmEVxG.o
+ .MIPS.options  0x00000001200003b0       0x28 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .MIPS.options  0x00000001200003d8       0x28 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .MIPS.options  0x0000000120000400       0x28 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+.note.gnu.build-id
+                0x0000000120000428       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x0000000120000428       0x24 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.dynamic        0x0000000120000450      0x200
+ *(.dynamic)
+ .dynamic       0x0000000120000450      0x200 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120000450                _DYNAMIC
+
+.hash           0x0000000120000650       0x50
+ *(.hash)
+ .hash          0x0000000120000650       0x50 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000001200006a0      0x168
+ *(.dynsym)
+ .dynsym        0x00000001200006a0      0x168 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.dynstr         0x0000000120000808       0xd6
+ *(.dynstr)
+ .dynstr        0x0000000120000808       0xd6 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.gnu.version    0x00000001200008de       0x1e
+ *(.gnu.version)
+ .gnu.version   0x00000001200008de       0x1e /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.gnu.version_d  0x0000000120000900        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000120000900        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.gnu.version_r  0x0000000120000900       0x20
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000120000900       0x20 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.rel.dyn        0x0000000120000920        0x0
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ *(.rel.dyn)
+ .rel.dyn       0x0000000120000920        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x0000000120000920        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                [!provide]                        PROVIDE (__rel_iplt_start, .)
+ *(.rel.iplt)
+                [!provide]                        PROVIDE (__rel_iplt_end, .)
+
+.rela.dyn       0x0000000120000920        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                        PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end, .)
+
+.rel.plt        0x0000000120000920        0x0
+ *(.rel.plt)
+ .rel.plt       0x0000000120000920        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x0000000120000920       0x40
+ *(SORT(.init))
+ .init          0x0000000120000920       0x30 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+                0x0000000120000920                _init
+ .init          0x0000000120000950       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+.plt            0x0000000120000960        0x0
+ *(.plt)
+ .plt           0x0000000120000960        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000120000960      0x310
+                0x0000000120000960                _ftext = .
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000120000960       0x60 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120000960                __start
+ .text          0x00000001200009c0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .text          0x00000001200009c0      0x150 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .text          0x0000000120000b10       0xb0 /tmp/ccEmEVxG.o
+                0x0000000120000b10                test
+                0x0000000120000b68                main
+ .text          0x0000000120000bc0       0xb0 /usr/lib64/libc_nonshared.a(elf-init.oS)
+                0x0000000120000bc0                __libc_csu_init
+                0x0000000120000c68                __libc_csu_fini
+ .text          0x0000000120000c70        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .text          0x0000000120000c70        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.MIPS.stubs     0x0000000120000c70       0x30
+ .MIPS.stubs    0x0000000120000c70       0x30 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120000c70                _MIPS_STUBS_
+                0x0000000120000c70                printf@@GLIBC_2.0
+                0x0000000120000c80                __libc_start_main@@GLIBC_2.0
+
+.fini           0x0000000120000ca0       0x28
+ *(SORT(.fini))
+ .fini          0x0000000120000ca0       0x18 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+                0x0000000120000ca0                _fini
+ .fini          0x0000000120000cb8       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+                [!provide]                        PROVIDE (__etext, .)
+                [!provide]                        PROVIDE (_etext, .)
+                [!provide]                        PROVIDE (etext, .)
+
+.rodata         0x0000000120000cd0       0x20
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.cst4   0x0000000120000cd0        0x4 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120000cd0                _IO_stdin_used
+ *fill*         0x0000000120000cd4        0xc 
+ .rodata        0x0000000120000ce0       0x10 /tmp/ccEmEVxG.o
+
+.interp         0x0000000120000cf0        0xf
+ .interp        0x0000000120000cf0        0xf /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr   0x0000000120000d00       0x1c
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000120000d00       0x1c /usr/lib64/libc_nonshared.a(elf-init.oS)
+                0x0000000120000d00                __GNU_EH_FRAME_HDR
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x0000000120000d20       0x7c
+ *(.eh_frame)
+ .eh_frame      0x0000000120000d20       0x78 /usr/lib64/libc_nonshared.a(elf-init.oS)
+                                         0x70 (松开之前的大小)
+ .eh_frame      0x0000000120000d98        0x4 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ *(.eh_frame.*)
+
+.note.ABI-tag   0x0000000120000d9c       0x20
+ .note.ABI-tag  0x0000000120000d9c       0x20 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x0000000120010fe8                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000120010fe8        0x0
+                [!provide]                        PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000120010fe8        0x8
+                0x0000000120010fe8                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x0000000120010fe8        0x8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+                0x0000000120010ff0                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000120010ff0        0x8
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x0000000120010ff0        0x8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+                [!provide]                        PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x0000000120010ff8        0x8
+ *(.jcr)
+ .jcr           0x0000000120010ff8        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .jcr           0x0000000120010ff8        0x8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+                0x0000000120011000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.data           0x0000000120011000       0x10
+                0x0000000120011000                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000120011000       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120011000                data_start
+                0x0000000120011000                __data_start
+ .data          0x0000000120011010        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .data          0x0000000120011010        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .data          0x0000000120011010        0x0 /tmp/ccEmEVxG.o
+ .data          0x0000000120011010        0x0 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .data          0x0000000120011010        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .data          0x0000000120011010        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+.rld_map        0x0000000120011010        0x8
+ .rld_map       0x0000000120011010        0x8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120011010                __RLD_MAP
+
+.tm_clone_table
+                0x0000000120011018        0x0
+ .tm_clone_table
+                0x0000000120011018        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .tm_clone_table
+                0x0000000120011018        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+
+.data1
+ *(.data1)
+
+.got.plt        0x0000000120011018        0x0
+ *(.got.plt)
+ .got.plt       0x0000000120011018        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120011018                . = .
+                0x0000000120011018                . = .
+                0x0000000120019010                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got            0x0000000120011020       0xa8
+ *(.got)
+ .got           0x0000000120011020       0xa8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                0x0000000120011020                _GLOBAL_OFFSET_TABLE_
+
+.sdata          0x00000001200110c8        0x8
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000001200110c8        0x8 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+                0x00000001200110c8                __dso_handle
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+
+.srdata
+ *(.srdata)
+                0x00000001200110d0                _edata = .
+                [!provide]                        PROVIDE (edata, .)
+                0x00000001200110d0                . = .
+                0x00000001200110d0                __bss_start = .
+                0x00000001200110d0                _fbss = .
+
+.sbss
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+
+.bss            0x00000001200110d0       0x10
+ *(.dynbss)
+ .dynbss        0x00000001200110d0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000001200110d0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ .bss           0x00000001200110d0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .bss           0x00000001200110d0       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .bss           0x00000001200110e0        0x0 /tmp/ccEmEVxG.o
+ .bss           0x00000001200110e0        0x0 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .bss           0x00000001200110e0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .bss           0x00000001200110e0        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+ *(COMMON)
+                0x00000001200110e0                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x00000001200110e0                . = ALIGN (0x8)
+                0x00000001200110e0                . = SEGMENT_START ("ldata-segment", .)
+                0x00000001200110e0                . = ALIGN (0x8)
+                0x00000001200110e0                _end = .
+                [!provide]                        PROVIDE (end, .)
+                0x00000001200110e0                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x2e
+ *(.comment)
+ .comment       0x0000000000000000       0x2e /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+                                         0x2f (松开之前的大小)
+ .comment       0x000000000000002e       0x2f /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .comment       0x000000000000002e       0x2f /tmp/ccEmEVxG.o
+ .comment       0x000000000000002e       0x2f /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .comment       0x000000000000002e       0x2f /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+
+.pdr            0x0000000000000000       0x80
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .pdr           0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .pdr           0x0000000000000000       0x40 /tmp/ccEmEVxG.o
+ .pdr           0x0000000000000040       0x40 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .pdr           0x0000000000000080        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .pdr           0x0000000000000080        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+.mdebug.abi64   0x0000000000000000        0x0
+ .mdebug.abi64  0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ .mdebug.abi64  0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .mdebug.abi64  0x0000000000000000        0x0 /tmp/ccEmEVxG.o
+ .mdebug.abi64  0x0000000000000000        0x0 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .mdebug.abi64  0x0000000000000000        0x0 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crt1.o
+ .gnu.attributes
+                0x0000000000000010       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crti.o
+ .gnu.attributes
+                0x0000000000000020       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtbegin.o
+ .gnu.attributes
+                0x0000000000000030       0x10 /tmp/ccEmEVxG.o
+ .gnu.attributes
+                0x0000000000000040       0x10 /usr/lib64/libc_nonshared.a(elf-init.oS)
+ .gnu.attributes
+                0x0000000000000050       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/crtend.o
+ .gnu.attributes
+                0x0000000000000060       0x10 /usr/lib/gcc/mips64el-loongson-linux/4.8.5/../../../../lib64/crtn.o
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(main.o elf64-tradlittlemips)
