@@ -1,7 +1,8 @@
 all: main
 
 main: main.c
-	gcc $^ -o $@
+	#gcc $^ -o $@ -DVDSO -L. -lvdso
+	gcc $^ -o $@ -DVDSO -L.
 	
 .PHONY: clean
 

@@ -6,6 +6,6 @@ main: main.c
 .PHONY: clean
 
 clean:
-	rm -f main
-	rm -f *.o
+	rm main
+	rm *.o
 

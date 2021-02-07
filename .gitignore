@@ -43,3 +43,14 @@ C/src/vdso/main
 C/src/void/main
 C/src/test2/main
 C/src/test3/main
+C/src/assemble/main
+C/src/daemon/main
+C/src/multi_thread/main
+C/src/sqlite3/main
+C/src/wait/main
+C/src/signal/main
+C/src/abort/main
+C/src/container/main
+C/src/test/main
+C/src/test4/main
+C/src/affinity/main

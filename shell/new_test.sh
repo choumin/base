@@ -34,8 +34,8 @@ main: main.c
 .PHONY: clean
 
 clean:
-	rm main
-	rm *.o
+	rm -f main
+	rm -f *.o
 '''> $file
 
 }
@@ -79,5 +79,6 @@ else
 	add_main $test_dir/main.c
 	add_makefile $test_dir/Makefile
 	add_to_ignore $src_dir/$test_name/main
-	echo "you can enter $test_name by j $test_dir"
+	echo "you can enter $test_name by:"
+	echo "j $test_dir"
 fi

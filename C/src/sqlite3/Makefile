@@ -1,11 +1,11 @@
 all: main
 
 main: main.c
-	gcc $^ -o $@
+	gcc $^ -o $@ -lsqlite3
 	
 .PHONY: clean
 
 clean:
-	rm -f main
-	rm -f *.o
+	rm main
+	rm *.o
 

@@ -1,0 +1,13 @@
+Dhrystone 2 using register variables         116700.0   19027858.9   1630.5
+Double-Precision Whetstone                       55.0       2708.2    492.4
+Execl Throughput                                 43.0       2818.8    655.5
+File Copy 1024 bufsize 2000 maxblocks          3960.0     400387.7   1011.1
+File Copy 256 bufsize 500 maxblocks            1655.0     107698.4    650.7
+File Copy 4096 bufsize 8000 maxblocks          5800.0    1199638.3   2068.3
+Pipe Throughput                               12440.0     710867.3    571.4
+Pipe-based Context Switching                   4000.0     127241.8    318.1
+Process Creation                                126.0       6141.7    487.4
+Shell Scripts (1 concurrent)                     42.4       6217.6   1466.4
+Shell Scripts (8 concurrent)                      6.0       1891.3   3152.2
+System Call Overhead                          15000.0     925426.0    617.0
+

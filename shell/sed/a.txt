@@ -1,0 +1,4 @@
+#abc
+
+path = /root 0 1
+th = 9.0 0 0
