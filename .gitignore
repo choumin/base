@@ -1,6 +1,7 @@
 timer/*.o
 timer/a.out
 timer/timer
+C/cscope.out
 C/src/getpwnam_r/main
 C/src/getuid/main
 C/src/hello/main
@@ -54,3 +55,7 @@ C/src/container/main
 C/src/test/main
 C/src/test4/main
 C/src/affinity/main
+C/src/setns/main
+C/src/argv/main
+C/src/line/main
+C/src/setns/main2
