@@ -13,6 +13,9 @@ void test(void) {
 
 	printf("--%s:%d--\n", __FILE__, __LINE__);
 	//print_pos();
+#line 100 "abc.c"
+
+	printf("--%s:%d--\n", __FILE__, __LINE__);
 }
 
 int main(void) {

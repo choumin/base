@@ -1,11 +1,11 @@
 all: main
 
 main: main.c
-	gcc -g $^ -o $@ -L. -lvdso
+	gcc $^ -o $@
 	
 .PHONY: clean
 
 clean:
-	rm main
-	rm *.o
+	rm -f main
+	rm -f *.o
 
