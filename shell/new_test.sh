@@ -7,7 +7,8 @@ function add_main() {
 	file="$1"
 	[ -z "$file" ] && "echo add main failed!" && return
 	
-echo '''#include <stdio.h>
+	cat > $file <<EOF
+#include <stdio.h>
 
 void test(void) {
 
@@ -18,15 +19,15 @@ int main(void) {
 	
 	return 0;
 }
-'''> $file
-
+EOF
 }
 
 function add_makefile() {
 	file="$1"
 	[ -z "$file" ] && "echo add Makefile failed!" && return 
 
-echo '''all: main
+	cat > $file <<EOF
+all: main
 
 main: main.c
 	gcc $^ -o $@
@@ -36,8 +37,7 @@ main: main.c
 clean:
 	rm -f main
 	rm -f *.o
-'''> $file
-
+EOF
 }
 
 function add_to_ignore() {

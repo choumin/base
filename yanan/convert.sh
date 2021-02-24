@@ -31,30 +31,46 @@ dst=$2
 echo "src dir is: $src"
 echo "dst dir is: $dst"
 
-#cur_dir=`pwd`
-#src_abs=$cur_dir/$src
-#dst_abs=$cur_dir/$dst
 src_abs=$src
 dst_abs=$dst
-for item in $(ls $src_abs)
-do
-	src_item=$src_abs/$item
 
-	echo $src_item
-	if [ -d $src_item ]; then
-		dst_item=$dst_abs/$item
-		if [ ! -d $dst_item ]; then
-			mkdir -p $dst_item
+function deal_2layer_dir()
+{
+	for item in $(ls $src_abs)
+	do
+		src_item=$src_abs/$item
+		echo $src_item
+		if [ -d $src_item ]; then
+			dst_item=$dst_abs/$item
+			if [ ! -d $dst_item ]; then
+				mkdir -p $dst_item
+			fi
+
+			for _item in $(ls $src_item)
+			do
+				src_file=$src_item/$_item
+				dst_file=$dst_item/$_item
+				echo "$src_file, $dst_file"
+				add_header $src_file $dst_file
+			done
+		else
+			cp $src_item $dst_abs/
 		fi
+	done
+}
 
-		for _item in $(ls $src_item)
-		do
-			src_file=$src_item/$_item
-			dst_file=$dst_item/$_item
-			echo "$src_file, $dst_file"
-			add_header $src_file $dst_file
-		done
-	else
-		cp $src_item $dst_abs/ 
-	fi
-done
+function deal_root_file()
+{
+	for item in $(ls $src_abs)
+	do
+		src_item=$src_abs/$item
+		if [ -f $src_item ]; then
+			dst_item=$dst_abs/$item
+			echo "$src_item, $dst_item"
+			remove_extra_space $src_item $dst_item
+		fi
+	done
+}
+
+deal_root_file
+

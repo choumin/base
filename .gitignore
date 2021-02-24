@@ -64,3 +64,4 @@ C/src/multi_pids/main
 C/src/list_dir/main
 C/src/no_vdso/main
 C/src/before_main/main
+C/src/complex_declare/main
