@@ -6,7 +6,10 @@ function remove_extra_space()
 
 	src_file=$1
 	dst_file=$2
-	cat $src_file |awk '{for(i=1;i<NF;++i){printf("%s ", $i)} printf("%s\n", $NF)}' > $dst_file
+	tmp=./tmp
+	cat $src_file |awk '{for(i=1;i<NF;++i){printf("%s ", $i)} printf("%s\n", $NF)}' > $tmp
+	cp $tmp $dst_file
+	rm $tmp
 }
 
 function add_header()
@@ -16,8 +19,11 @@ function add_header()
 	src_file=$1
 	dst_file=$2
 	header=./header.txt
-	cat $header > $dst_file
-	cat $src_file >> $dst_file
+	tmp=./tmp
+	cat $header > $tmp
+	cat $src_file >> $tmp
+	cp $tmp $dst_file
+	rm $tmp
 }
 
 [ $# -lt 2 ] && echo "Usage: $0 src dst" && exit
@@ -68,6 +74,7 @@ function deal_root_file()
 			dst_item=$dst_abs/$item
 			echo "$src_item, $dst_item"
 			remove_extra_space $src_item $dst_item
+			add_header $dst_item $dst_item
 		fi
 	done
 }

@@ -30,7 +30,7 @@ function add_makefile() {
 all: main
 
 main: main.c
-	gcc $^ -o $@
+	gcc $^ -o \$@
 	
 .PHONY: clean
 

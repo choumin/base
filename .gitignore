@@ -65,3 +65,7 @@ C/src/list_dir/main
 C/src/no_vdso/main
 C/src/before_main/main
 C/src/complex_declare/main
+C/src/compound/main
+C/src/test5/main
+C/src/test6/main
+C/src/func_pointer/main
