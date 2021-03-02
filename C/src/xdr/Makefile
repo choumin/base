@@ -1,7 +1,7 @@
 all: main
 
 main: main.c
-	gcc $^ -o $@
+	gcc -g $^ -o $@
 	
 .PHONY: clean
 
