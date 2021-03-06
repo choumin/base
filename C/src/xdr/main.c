@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include "send_file.h"
 
 #define USER_NAME_MAX_LEN	32
 #define MD5_LEN				16
@@ -14,6 +15,8 @@ typedef struct {
 	char *name;
 	char *passwd_md5;
 } validate_req;
+
+char *tmp_file = "tmp.txt";
 
 bool validate_req_encode(void *req, char **buf, int *len)
 {
@@ -89,9 +92,98 @@ void test(void)
 	printf("passwd_md5: %s\n", _req.passwd_md5);
 }
 
+
+void test2(void)
+{
+	send_file_req sfr;
+
+	printf("before assign\n");
+	strcpy(sfr.filename, "a.out");
+	strcpy(sfr.session_id, "19910930");
+	strcpy(sfr.md5, "helloworld");
+	sfr.length = 30;
+
+	//char *tmp = (char *)malloc(sizeof(char) * 1024);
+	FILE *fp = fopen(tmp_file, "w");
+	XDR xdr;
+	xdrstdio_create(&xdr, fp, XDR_ENCODE);
+	//xdrmem_create(&xdr, tmp, 1024, XDR_ENCODE); 
+
+	printf("before encode\n");
+	int ret = xdr_send_file_req(&xdr, &sfr);
+	printf("ret: %d\n", ret);
+	fclose(fp);
+}
+
+void test3(void)
+{
+	send_file_req sfr;
+
+	FILE *fp = fopen(tmp_file, "r");
+	XDR xdr;
+	
+	xdrstdio_create(&xdr, fp, XDR_DECODE);
+	printf("before decode\n");
+	int ret = xdr_send_file_req(&xdr, &sfr);	
+
+	printf("ret: %d\n", ret);
+	printf("filename: %s\n", sfr.filename);
+	printf("session_id: %s\n", sfr.session_id);
+	printf("md5: %s\n", sfr.md5);
+	printf("length: %d\n", sfr.length);
+	fclose(fp);
+}
+
+char *test4(size_t *sizep)
+{
+	send_file_req sfr;
+
+	printf("before assign\n");
+	strcpy(sfr.filename, "a.out");
+	strcpy(sfr.session_id, "19910930");
+	strcpy(sfr.md5, "helloworld");
+	sfr.length = 30;
+
+	char *buf = NULL;
+	FILE *fp = open_memstream(&buf, sizep);
+	XDR xdr;
+	xdrstdio_create(&xdr, fp, XDR_ENCODE);
+
+	printf("before encode\n");
+	int ret = xdr_send_file_req(&xdr, &sfr);
+	printf("ret: %d\n", ret);
+	fclose(fp);
+
+	return buf;
+}
+
+void test5(char *buf, int size)
+{
+	send_file_req sfr;
+
+	XDR xdr;
+	
+	FILE *fp = fmemopen(buf, size, "r");
+	xdrstdio_create(&xdr, fp, XDR_DECODE);
+
+	printf("before decode\n");
+	int ret = xdr_send_file_req(&xdr, &sfr);	
+
+	printf("ret: %d\n", ret);
+	printf("filename: %s\n", sfr.filename);
+	printf("session_id: %s\n", sfr.session_id);
+	printf("md5: %s\n", sfr.md5);
+	printf("length: %d\n", sfr.length);
+
+	free(buf);
+}
+
 int main(void)
 {
-	test();
+	size_t size = 0;
+	char *buf = test4(&size);
+	printf("encode len: %u\n", size);
+	test5(buf, size);
 
 	return 0;
 }
